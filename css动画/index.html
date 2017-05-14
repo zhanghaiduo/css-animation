@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            border:0;
+            box-sizing:border-box;
+        }
+        html,body {
+            font-size:14px;
+        }
+        #animate {
+            width:800px;
+            height:800px;
+            border:1px solid red;
+            margin:0 auto;
+            position:relative
+        }
+        #yang {
+            position:absolute;
+            right:0;
+            top:50px;
+            opacity:0;
+            animation: yang 2s ease forwards 0.5s;
+        }
+        /*定义一个yang的动画*/
+        @keyframes yang {
+            100% {
+              opacity:1;
+            }
+        }
+        #yun {
+            position:absolute;
+            left:100px;
+            top:50px;
+            opacity:0;
+            animation: yun 2s ease forwards 2s;
+        }
+        @keyframes yun {
+            100% {
+                opacity:1;
+            }
+        }
+        #ren {
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-150px;
+            margin-top:-140px;
+            opacity:0;
+            animation: ren 2s ease forwards 4s;
+        }
+        @keyframes ren {
+            100% {
+                opacity:1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!--让太阳首先出现，然后，再出现云彩，最后出现人.-->
+    <div id="animate">
+        <img id="yang" src="yang.png">
+        <img id="yun" src="yun.png">
+        <img id="ren" src="ren.png">
+    </div>
+</body>
+</html>
+<script>
+
+</script>
